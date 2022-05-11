@@ -17,7 +17,7 @@
     "Project": "Osiris",
     "ReflectedWorkItemIDFieldName": "Custom.ReflectedWorkItemId",
     "AllowCrossProjectLinking": false,
-    "PersonalAccessToken": "iqcngm222kjlmfhkzuhg2qo5ramsbo27uyjvsdl26caxuyqxg3uq",
+    "PersonalAccessToken": "7f7rhzorsuifhfagj6lcisnfqfq5euvcm6z3upswcrt7qjl3eddq",
     "LanguageMaps": {
       "AreaPath": "Area",
       "IterationPath": "Iteration"
@@ -78,7 +78,7 @@
       "PrefixProjectToNodes": false,
       "UpdateCreatedDate": true,
       "UpdateCreatedBy": true,
-      "WIQLQueryBit": "AND [Microsoft.VSTS.Common.ClosedDate] = '' AND [System.WorkItemType] IN ('Test Suite', 'Test Plan')",
+      "WIQLQueryBit": "AND [System.Tags] CONTAINS 'MDC' AND [System.WorkItemType] NOT IN ('Test Suite', 'Test Plan','Shared Parameter')",
       "WIQLOrderBit": "[System.ChangedDate] desc",
       "LinkMigration": true,
       "AttachmentMigration": true,
@@ -99,15 +99,15 @@
     },
     {
       "$type": "TestVariablesMigrationConfig",
-      "Enabled": true
+      "Enabled": false
     },
     {
       "$type": "TestConfigurationsMigrationConfig",
-      "Enabled": true
+      "Enabled": false
     },
     {
       "$type": "TestPlansAndSuitesMigrationConfig",
-      "Enabled": true,
+      "Enabled": false,
       "PrefixProjectToNodes": false,
       "RemoveInvalidTestSuiteLinks": true
     }
